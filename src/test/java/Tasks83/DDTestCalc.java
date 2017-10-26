@@ -5,6 +5,8 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.*;
 
+import java.lang.reflect.Array;
+
 /**
  * Created by pavlo.balyuk on 10/24/2017.
  */
@@ -19,13 +21,13 @@ public class DDTestCalc {
         };
     }
 
-    private static Object[][] ar2 = {{3.14, 2.71, 5.85}, {1.0, 2.0, 3.0}, {2.0, 1.0, 3.0}};
-
+    static Object[] ar2 = {3.14, 2.71, 5.85};
     @DataProvider(name = "array")
-    public static Object[][] createArray() {
-        return new Object[][]{ar2
-        };
-    }
+    public static Object[][] createArray(){
+        return new Object[][]{ ar2
+            };
+        }
+
 
 
     @BeforeTest
@@ -35,7 +37,7 @@ public class DDTestCalc {
     }
 
     @Test(dataProvider = "array")
-    public void testCalcAdding(double a, double b, double exp) throws Exception {
+    public void testCalcAdd(double a, double b, double exp) throws Exception {
 
         Reporter.log("asserting add method", true);
         Assert.assertEquals(setup().add(a, b), exp);

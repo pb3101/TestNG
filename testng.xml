@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="D:/TestNG/src/test/java">
-        <parameter name="a" value="2.0"/>
-        <parameter name="b" value="2.0"/>
+    <test verbose="2" preserve-order="true" name="TEST">
         <classes>
             <class name="TEST.dataProviderExample">
                 <methods>
@@ -23,11 +21,30 @@
                     <include name="testCalcAdd"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="XML">
+        <parameter name="a" value="2.0"/>
+        <parameter name="b" value="1.0"/>
+        <parameter name="exp" value="3.0"/>
+        <classes>
             <class name="Tasks84.DDTestXML">
                 <methods>
                     <include name="testCalcAdd"/>
                 </methods>
             </class>
+            <class name="Tasks8Bonus.MethodName">
+                <methods>
+                    <include name="methodNameTest"/>
+                </methods>
+            </class>
+            <class name="Tasks8Bonus.Suite">
+                <methods>
+                    <include name="beforeSuite"/>
+                    <include name="AfterSuite"/>
+                </methods>
+            </class>
         </classes>
     </test>
+
 </suite>

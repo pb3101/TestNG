@@ -15,7 +15,7 @@ public class dataProviderExample {
             };
         }
 
-        @Test(dataProvider = "test1")
+        @Test(testName = "TEST",dataProvider = "test1")
         public void verifyData1(String n1, Integer n2) {
             System.out.println(n1 + " " + n2);
         }
