@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="D:/TestNG/src/test/java">
+        <parameter name="a" value="2.0"/>
+        <parameter name="b" value="2.0"/>
+        <classes>
+            <class name="TEST.dataProviderExample">
+                <methods>
+                    <include name="verifyData1"/>
+                </methods>
+            </class>
+            <class name="Tasks81.TestCalc">
+                <methods>
+                    <include name="testCalcAdd"/>
+                    <include name="testCalcSubtract"/>
+                    <include name="testCalcMultiply"/>
+                    <include name="testCalcDivide"/>
+                </methods>
+            </class>
+            <class name="Tasks83.DDTestCalc">
+                <methods>
+                    <include name="testCalcAdd"/>
+                </methods>
+            </class>
+            <class name="Tasks84.DDTestXML">
+                <methods>
+                    <include name="testCalcAdd"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
