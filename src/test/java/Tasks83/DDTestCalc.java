@@ -1,15 +1,13 @@
 package Tasks83;
 
-import Calculator.Calculator;
+import Tasks8Bonus.Setup;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.*;
-
-import java.lang.reflect.Array;
 
 /**
  * Created by pavlo.balyuk on 10/24/2017.
  */
+
 public class DDTestCalc {
 
     @DataProvider(name = "test")
@@ -28,18 +26,10 @@ public class DDTestCalc {
             };
         }
 
-
-
-    @BeforeTest
-    public Calculator.CalcMethods setup() {
-        Calculator.CalcMethods calc = new Calculator.CalcMethods();
-        return calc;
-    }
-
     @Test(dataProvider = "array")
-    public void testCalcAdd(double a, double b, double exp) throws Exception {
-
-        Reporter.log("asserting add method", true);
-        Assert.assertEquals(setup().add(a, b), exp);
+    public void testCalcAddDataProvider(double a, double b, double exp) throws Exception {
+        Setup setEnv = new Setup();
+        //Reporter.log("asserting add method", true);
+        Assert.assertEquals(setEnv.setup().add(a, b), exp);
     }
 }

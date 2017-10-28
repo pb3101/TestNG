@@ -14,6 +14,8 @@ public class MethodListener implements IInvokedMethodListener {
 
     @Override
     public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-        System.out.println(method.getTestMethod().getMethodName());
+        if (method.isTestMethod()) {
+            System.out.println(method.getTestMethod().getMethodName());
+        }
     }
 }

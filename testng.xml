@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="TEST">
+    <test name="1">
         <classes>
-            <class name="TEST.dataProviderExample">
+            <class name="Tasks8Bonus.Setup">
                 <methods>
-                    <include name="verifyData1"/>
+                    <include name="setup"/>
                 </methods>
             </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="TEST">
+        <classes>
             <class name="Tasks81.TestCalc">
                 <methods>
                     <include name="testCalcAdd"/>
@@ -18,7 +22,7 @@
             </class>
             <class name="Tasks83.DDTestCalc">
                 <methods>
-                    <include name="testCalcAdd"/>
+                    <include name="testCalcAddDataProvider"/>
                 </methods>
             </class>
         </classes>
@@ -30,21 +34,9 @@
         <classes>
             <class name="Tasks84.DDTestXML">
                 <methods>
-                    <include name="testCalcAdd"/>
-                </methods>
-            </class>
-            <class name="Tasks8Bonus.MethodName">
-                <methods>
-                    <include name="methodNameTest"/>
-                </methods>
-            </class>
-            <class name="Tasks8Bonus.Suite">
-                <methods>
-                    <include name="beforeSuite"/>
-                    <include name="AfterSuite"/>
+                    <include name="testCalcAddParametersXML"/>
                 </methods>
             </class>
         </classes>
     </test>
-
 </suite>
