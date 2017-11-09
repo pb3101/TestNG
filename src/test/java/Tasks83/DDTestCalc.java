@@ -19,17 +19,17 @@ public class DDTestCalc {
         };
     }
 
-    static Object[] ar2 = {3.14, 2.71, 5.85};
-    @DataProvider(name = "array")
-    public static Object[][] createArray(){
-        return new Object[][]{ ar2
-            };
-        }
+    static Object[][] ar2 = {{3.14, 2.71, 5.85},{3.14, 2.71, 5.85},{3.14, 2.71, 5.85}};
 
-    @Test(dataProvider = "array")
+    @DataProvider(name = "array")
+    public static Object[][] createArray() {
+        return ar2;
+    }
+
+    @Test(dataProvider = "test")
     public void testCalcAddDataProvider(double a, double b, double exp) throws Exception {
-        Setup setEnv = new Setup();
+        Setup suite = new Setup();
         //Reporter.log("asserting add method", true);
-        Assert.assertEquals(setEnv.setup().add(a, b), exp);
+        Assert.assertEquals(suite.setup().add(a, b), exp);
     }
 }
