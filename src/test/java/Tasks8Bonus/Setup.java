@@ -8,9 +8,15 @@ import org.testng.annotations.*;
  */
 @Listeners({MethodListener.class})
 public class Setup {
-    @BeforeSuite
-    public Calculator.CalcMethods setup() {
-        final Calculator.CalcMethods calc = new Calculator.CalcMethods();
-        return calc;
+
+    private static Calculator.CalcMethods calculator = new Calculator.CalcMethods();
+
+    public Setup() {
+
     }
+
+    public static Calculator.CalcMethods setup() {
+        return calculator;
+    }
+
 }

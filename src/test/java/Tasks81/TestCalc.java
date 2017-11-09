@@ -1,9 +1,7 @@
 package Tasks81;
 
 import Calculator.Calculator;
-import Tasks8Bonus.Setup;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.*;
 
 /**
