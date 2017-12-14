@@ -57,7 +57,7 @@ public class LoginUsingPageFactory {
     public void afterMethod() {
 
         driver.quit();
-
+        driver = null;
     }
 
 }

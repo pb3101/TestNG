@@ -34,6 +34,6 @@ public class HowerCheck {
         driver.findElement(By.xpath("//*[@id=\"menu-item-3242\"]/a")).click();
         String header = SingletonWD.getInstance(browser).findElement(By.className("toppage__title")).getText();
         Assert.assertEquals(header, "OUR CLIENTS");
-        SingletonWD.getInstance(browser).quit();
+        SingletonWD.killInstance();
     }
 }

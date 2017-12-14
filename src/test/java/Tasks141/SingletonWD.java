@@ -34,4 +34,9 @@ public class SingletonWD {
         }
         return driver;
     }
+
+    public static  void killInstance(){
+        driver.quit();
+        driver = null;
+    }
 }
