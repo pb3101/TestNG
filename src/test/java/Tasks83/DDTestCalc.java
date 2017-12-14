@@ -26,7 +26,7 @@ public class DDTestCalc {
         return ar2;
     }
 
-    @Test(dataProvider = "test")
+    @Test(dataProvider = "array")
     public void testCalcAddDataProvider(double a, double b, double exp) throws Exception {
         Setup suite = new Setup();
         //Reporter.log("asserting add method", true);

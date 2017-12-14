@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by pavlo.balyuk on 11/27/2017.
  */
-public class SingletonWD {
+class SingletonWD {
 
     private static WebDriver driver;
 

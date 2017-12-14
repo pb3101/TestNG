@@ -1,4 +1,4 @@
-package Tasks133;
+package Tasks141;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by pavlo.balyuk on 11/27/2017.
  */
-class SingletonWD {
+public class SingletonWD {
 
     private static WebDriver driver;
 
@@ -29,6 +29,7 @@ class SingletonWD {
             } else {
                 throw new UnsupportedOperationException("Unknown browser " + browser);
             }
+            driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
         return driver;
