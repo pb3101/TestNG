@@ -17,7 +17,7 @@ import static org.testng.Assert.assertTrue;
  */
 public class PageFactoryLogin {
 
-    private static WebDriver driver;
+
 
     public PageFactoryLogin (WebDriver driver){
         PageFactory.initElements(driver, this);
